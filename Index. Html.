@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Shasha ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:25px;
+text-align:center;
+width:90%;
+max-width:450px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+animation:fade 2s;
+}
+
+h1{
+color:#ff4081;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:#ff4081;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#answer{
+display:none;
+margin-top:20px;
+font-size:28px;
+color:#e91e63;
+font-weight:bold;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+position:absolute;
+color:#ff4d88;
+font-size:24px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{opacity:1;}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💖 To My Shasha My Janam ❣️ Queen 👸</h1>
+
+<p>
+Every heartbeat reminds me of you.<br><br>
+
+Your smile is my favorite place.<br>
+
+Your happiness means everything to me.<br><br>
+
+I never want to imagine a future without you.
+</p>
+
+<h2>Will You Be My Girlfriend? ❤️</h2>
+
+<br>
+
+<button onclick="yes()">YES 💍</button>
+
+<div id="answer">
+🥹❤️ You just made me the happiest person alive! ❤️🥹
+</div>
+
+</div>
+
+<script>
+
+function yes(){
+document.getElementById("answer").style.display="block";
+}
+
+function hearts(){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*30)+"px";
+
+h.style.animationDuration=(4+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),9000);
+
+}
+
+setInterval(hearts,300);
+
+</script>
+
+</body>
+</html>
